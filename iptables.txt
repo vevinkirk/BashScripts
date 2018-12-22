@@ -1,0 +1,24 @@
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -p tcp --dport {PORT} -j ACCEPT
+iptables -A INPUT -p tcp --dport {PORT} ACCEPT
+iptables -A INPUT -p tcp --dport {PORT} -j ACCEPT
+iptables -A INPUT -p tcp --dport {PORT} -j ACCEPT
+iptables -A INPUT -p tcp --dport {PORT} -j ACCEPT
+
+
+iptables -A INPUT -j DROP
+
+
+
+
+apt-get install iptables-persistent
+
+iptables -A INPUT -p tcp --dport 80 -j ACCEPTi
+
+
+
+iptables -A INPUT -p tcp --dport 56214 -j ACCEPT
+iptables -A INPUT -p tcp -s IP/24 -j ACCEPT
+iptables -A INPUT -j DROP
+
